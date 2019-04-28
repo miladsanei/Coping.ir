@@ -1,0 +1,16 @@
+.alert{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.alert.danger{
+    color: $red;
+}
+.alert.success{
+    color: $green;
+}
+.alert.warning{
+    color: $orange/1.1;
+}
+.alert.info{
+    color: $blue;
+}

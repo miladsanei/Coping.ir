@@ -1,0 +1,174 @@
+<html lang="fa">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <link rel="icon" href="assets/img/icon.png">
+            <link rel="apple-touch-icon" href="assets/img/icon.png">
+            <link rel="stylesheet" href="assets/css/style.min.css">
+            <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+            <script src="assets/js/jquery-3.2.1.min.js"></script>
+            <script src="assets/js/script.js"></script>
+            <title>صفحه کلیپبورد جدید</title>
+        </head>
+        <body>
+            <!--New Clipboard Page -->
+            <div class="page">
+                    <div class="header">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <a href="#" class="logo"><img src="assets/logo.svg" alt="Coping logo"></a> 
+                                </div>
+                                <nav class="navigation">
+                                    <ul>
+                                        <li><a href="clipboard-edit.html">مدیریت کلیپبورد</a></li>
+                                        <li><a href="clipboard-page.html">صفحه کلیپبورد</a></li>
+                                        <li><a href="clipboard-list.html">لیست کلیپبوردها</a></li>
+                                        <li><a href="clipboard-private.html">کلیپبورد خصوصی</a></li>
+                                        <li><a href="clipboard-email.html">ارسال ایمیل</a></li>
+                                        <li><a href="extra-page.html">برگه اضافی</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="page-content">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="title">
+                                        <h2 data-help="test">ساخت کلیپبورد جدید</h2>
+                                        <p class="description">بی نهایت متن و عکس می‌توانید به هر کلیپبورد خود اضافه کنید</p>
+                                    </div>
+                                    <!-- New Clipboard Form -->
+                                    <div class="form">
+                                            <form action="#">
+                                                <!-- Form Field -->
+                                                <div class="form-control">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <span class="help" data-help-right="نام یا عنوان کلیپبورد شما.">
+                                                            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                                                            </span>
+                                                            <label for="clipboard-name">نام کلیپبورد</label>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <input id="clipboard-name" type="text" placeholder="نام کلیپبورد خود را وارد کنید">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Form Field -->
+                                                <div class="form-control">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <span class="help" data-help-right="این آدرس کلیپبورد شماست، برای دسترسی به کلیپبورد خود روی هر دستگاهی این آدرس را در مرورگر وارد کنید.">
+                                                                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                                                            </span>
+                                                            <label for="clipboard-address">آدرس کلیپبورد</label>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <input disabled dir="ltr" id="clipboard-address" type="text" value="Xhj56s">
+                                                            <label dir="ltr" class="url" for="clipboard-address">http://coping.ir/</label>                                            </div>
+                                                    </div>
+                                                </div>      
+                                                <!-- Form Field -->
+                                                <div class="form-control">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <span class="help" data-help-right="آدرس ایمیلتان را وارد کنید تا بعدا کلیپبوردهایتان را مدیریت کنید.">
+                                                            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                                                            </span>
+                                                            <label for="email-address">آدرس ایمیل</label>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <input dir="ltr" id="email-address" type="email" placeholder="آدرس ایمیل خود را وارد کنید">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Form Field -->
+                                                <div class="form-control">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <span class="help" data-help-right="اگر میخواهید کلیپبوردتان عمومی باشد و دیگران بتوانند محتوی آن را مشاهده کنند خالی بگذارید، در غیر این صورت رمز وارد نمایید.">
+                                                            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                                                            </span>
+                                                            <label class="password-label" for="clipboard-password">کلیپبورد عمومی</label>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <input dir="ltr" class="clipboard-password" id="clipboard-password" type="password" placeholder="رمز عبور را وارد کنید">
+                                                            <span class="show-password">
+                                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Form Field -->
+                                                <div class="form-control">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <span class="help" data-test="left" data-help-right="کلیپبوردها پس از زمان مشخصی به طور خودکار از بین می روند، در صورتی که می خواهید آنها را برای زمان زیادی نگه دارید بلا بلا بلا.">
+                                                                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                                                            </span>
+                                                            <label for="auto-destroy">نابودی خودکار بعد از</label>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <input dir="ltr" id="auto-destroy" type="number" value="1">
+                                                            <label for="auto-destroy">روز</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Danger Alert -->
+                                                <div class="alert danger">
+                                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                                    یک پیغام خطا.
+                                                </div>
+                                                <!-- Success Alert -->
+                                                <div class="alert success">
+                                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                                    یک پیغام موفقیت آمیز. 
+                                                </div>
+                                                <!-- Warning Alert -->
+                                                <div class="alert warning">
+                                                    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                                    یک پیغام هشدار.
+                                                </div>
+                                                <!-- Info Alert -->
+                                                <div class="alert info">
+                                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                                    یک پیغام اطلاع رسانی.
+                                                </div>
+                                                 <!-- Submit Button -->
+                                                <input class="btn blue lg" type="submit" value="ایجاد رایگان کلیپبورد">
+                                            </form>
+                                        </div>
+                                    <!-- End of New Clipboard Form -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of New Clipboard Window -->
+                </div>
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="javascript:void(0)" data-tooltip="برو بالا" class="go-top"><i class="fa fa-caret-up" aria-hidden="true"></i></a>
+                            <img src="assets/footer-logo.svg" alt="" class="footer-logo">
+                            <ul>
+                                <li><a href="#">قوانین سرویس دهی</a></li>
+                                <li><a href="#">همکاری با ما</a></li>
+                                <li><a href="#">درباره ما</a></li>
+                                <li><a href="#">تماس با ما</a></li>
+                            </ul>
+                        </div>
+                    </div>            
+                </div>
+            </footer>
+            <!-- End of Footer -->
+    
+            
+        </body>
+        </html>

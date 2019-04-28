@@ -1,0 +1,12 @@
+@if $title-font-family != null {
+    h1, h2, h3, h4, h5, h6{
+        font-family: $title-font-family;
+        font-weight: normal;
+    }
+}
+// @include font-face("Samim", "../fonts/samim/Samim", normal, woff);
+// @include font-face("Samim", "../fonts/samim/Samim-Bold", bold, woff);
+@include font-face("Vazir", "../fonts/vazir/Vazir", normal, woff);
+@include font-face("Vazir", "../fonts/vazir/Vazir-Bold", bold, woff);
+@include font-face("Vazir", "../fonts/vazir/Vazir-Light", 300, woff);
+@include font-face("Lalezar1", "../fonts/lalezar/Lalezar", normal, woff);

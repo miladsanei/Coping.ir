@@ -1,0 +1,33 @@
+@mixin font-face($name, $path, $weight: null, $exts: eot woff2 woff ttf svg){
+    $src: null;
+    $extmods: (
+        eot: "?",
+        svg: "#" + str_replace($name, " ", "_")
+    );
+    $formats: (
+        otf: "opentype",
+        ttf: "truetype"
+    );
+    @each $ext in $exts{
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extsmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+    @font-face {
+        font-family: quote($name);
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false){
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $color;
+        -moz-box-shadow: inset $top $left $blur $color;
+        box-shadow: inset $top $left $blur $color;
+    } @else{
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}

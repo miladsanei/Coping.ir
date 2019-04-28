@@ -1,0 +1,584 @@
+*{
+    box-sizing: border-box;
+    &:after, &:before{
+        box-sizing: border-box;
+    }
+    &:active, &focus{
+        outline: 0;
+    }
+    
+}
+::-moz-selection{
+    background: $red;
+    color: $white;
+}
+::selection{
+    background: $red;
+    color: $white;    
+}
+ul,li,a,p{
+    padding: 0;
+    margin: 0;
+}
+a, a:hover, a:focus{
+    text-decoration: none;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    direction: rtl;
+    
+}
+html{
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: $white;
+    color: $dark-blue;
+    font-family: $body-font-family;
+    letter-spacing: -.25px;
+}
+
+.description{
+    color: $light-blue;
+    font-weight: 300;
+}
+.title{
+    text-align: center;
+}
+.header{
+    padding: 30px 0 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #FBFBFB;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    &:after{
+        content: '';
+        background: url("../header-after.svg");
+        position: absolute;
+        width: 100%;
+        height: 29px;
+        bottom: -19px;
+        left: 0;
+        right: 0;
+        background-repeat: repeat-x;
+    }
+}
+.navigation{
+    display: inline-block;
+    padding: 16px 0;
+    ul{
+        
+        li{
+            display: inline-block;
+            float: right;
+            
+            a{
+                padding: 0 20px;
+                color: $dark-blue;
+                &:hover{
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+.logo{
+    display: block;
+    margin-top: 6px;
+    z-index: 101;
+}
+
+
+.features{
+    margin-top: -8px;
+    z-index: 1;
+    position: relative;
+    background-color: $white;
+    &:before{
+        content: '';        
+        background-image: url("../img/clouds.png");
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 118px;
+        background-repeat: repeat-x;
+        margin-top: -116px;
+        background-position: top right;
+    }
+    .title{
+        padding-top: 30px;
+    }
+    .features-item{
+        text-align: center;
+        margin-bottom: 60px;
+        cursor: default;
+        &:hover{
+            .features-icon{
+                transform: scale(1.1)
+            }
+        }
+        .features-icon {
+            display: inline-flex;
+            font-size: 32px;
+            width: 87px;
+            height: 87px;
+            line-height: 134px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: ease-in .1s;
+         }
+        .features-icon.green{
+             @include box-shadow(0px, 6px, 14.4px, rgba(82, 169, 62, 0.14));
+             border: 2px solid rgba(82, 169, 62, 0.14);
+             color: $green;
+         }
+        .features-icon.medium-blue{
+            @include box-shadow(0px, 6px, 14.4px, rgba(98, 93, 134, 0.14));
+            border: 2px solid rgba(98, 93, 134, 0.14);
+            color: $medium-blue;
+        }
+        .features-icon.blue{
+            @include box-shadow(0px, 6px, 14.4px, rgba(37, 154, 241, 0.14));
+            border: 2px solid rgba(37, 154, 241, 0.14);
+            color: $blue;
+        }
+        .features-icon.red{
+            @include box-shadow(0px, 6px, 14.4px, rgba(255, 116, 115, 0.14));
+            border: 2px solid rgba(255, 116, 115, 0.14);
+            color: $red;
+        }
+        .features-icon.orange{
+            @include box-shadow(0px, 6px, 14.4px, rgba(237, 175, 39, 0.14));
+            border: 2px solid rgba(237, 175, 39, 0.14);
+            color: $orange;
+        }
+        .features-icon.purple{
+            @include box-shadow(0px, 6px, 14.4px, rgba(75, 37, 241, 0.14));
+            border: 2px solid rgba(75, 37, 241, 0.14);
+            color: $purple;
+        }
+        h3{
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #484566;
+        }
+    }
+
+}
+
+.features, .team, .page{
+    h2{
+        font-size: 38px;
+        margin-bottom: 0;
+    }
+    .title{
+        margin-bottom: 90px;
+    }
+}
+
+.team{
+    background-color: $dark-blue;
+    &::before{
+        content: '';
+        background: url('../team-before.svg');
+        position: absolute;
+        width: 100%;
+        height: 29px;
+        left: 0;
+        right: 0;
+        background-repeat: repeat-x;
+    }
+
+    .title{
+        margin-top: 90px;
+    }
+    .description{
+        color: $white;
+    }
+    h2{
+        color: $orange;
+    }
+    .team-member{
+        background-color: #1e1c38;
+        padding: 20px;
+        border-radius: $radius;
+        margin-bottom: 120px;
+        @include box-shadow(0px, 6px, 14.4px, rgba(98, 93, 134, 0.14));
+        .social-icons{
+            text-align: left;
+            position: relative;
+            a{
+                display: inline-block;
+                font-size: 26px;
+                margin-left: 10px;
+                float: left;
+                color: #9f7e36;
+                transition: color .25s;
+                &:nth-child(1){
+                    margin-left: 0;
+                }
+                &:hover{
+                    color: $orange;
+                    
+                }
+            }
+        }
+        .description{
+            color: #8a85b1 !important;
+            margin-bottom: 68px;        
+        }
+        img{
+            max-width: 100%;
+            border-radius: 50%;
+        }
+        h3{
+            color: $white;
+            font-size: 26px;
+            margin-bottom: 0;
+        }
+    }
+}
+.footer{
+    background-color: #211f38;
+    text-align: center;
+    &::before{
+        content: '';
+        background: url('../footer-before.svg');
+        position: absolute;
+        width: 100%;
+        height: 29px;
+        margin-top: -29px;
+        right: 0;
+        transform: rotate(180deg);
+        left: 0;
+        right: 0;
+        background-repeat: repeat-x;
+    }
+    .go-top{
+        display: block;
+        font-size: 70px;
+        width: 70px;
+        margin: 0 auto;
+        color: #3e3c59;
+        transition: color .3s;
+        margin-bottom: 60px;
+        margin-top: 30px;
+        i{
+            line-height: 35px;
+        }
+        &:hover{
+            color: $light-blue;
+        }
+    }
+    .footer-logo{
+        width: 120px;
+        margin-bottom: 60px;
+    }
+    ul{
+        margin-bottom: 60px;
+        li{
+            display: inline-block;
+            a{
+                padding: 0 20px;
+                color: #fff;
+                &:hover{
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+
+body.new{
+    .new-clipboard{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0)
+    }
+    .start{
+        cursor: default;
+    }
+}
+
+.new-clipboard{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    overflow: scroll;
+    transition:cubic-bezier(0.215, 0.610, 0.355, 1) .25s .05s;
+    transform: translateY(500px);
+    
+}
+
+
+div.header{
+    position: relative;
+    border: 0;
+    display: block;
+}
+.page{
+    margin-bottom: 60px;
+    .title{
+        text-align: right;
+        margin-bottom: 50px;
+        margin-top: 60px;
+    }
+}
+
+.form{
+    margin-top: 30px;
+    .form-control{
+        margin-bottom: 15px;
+        border-bottom: 2px solid #e5e4ea;
+        padding-bottom: 15px;
+    }
+    input[type="text"], input[type="password"], input[type="email"], input[type="number"]{
+        border: 0;
+        border-right: 2px solid #e5e4ea;
+        padding: 0 10px;
+        width: 100%;
+        text-align: right;
+    }
+    input[type="submit"]{
+        border: 0;
+        float: left;
+    }
+    input[id="clipboard-address"]{
+        width: 50px;
+        text-align: left;
+        padding: 0;
+    }
+    input[type="number"]{
+        width: 80px;
+        text-align: left;
+    }
+    label{
+        font-weight: bold;
+    }
+
+    .help{
+        margin-right: -45px;
+        float: right;
+        color: #bebacc;
+        margin-top: 5px;       
+
+    }
+    .show-password{
+        position: absolute;
+        cursor: pointer;
+        color: #8582a3;
+        width: 40px;
+        height: 40px;
+        left: 0;
+        text-align: center;
+        padding: 10px 0;
+        top: -6px;
+    }
+    .password-label{
+        i{
+            color: $light-blue;
+        }
+    }
+}
+.help{
+    cursor: help; 
+}
+.page{
+    .navigation{
+        float: left;
+    }
+}
+.sidebar{
+    margin-top: 60px;
+}
+
+.clipboard-info{
+    margin: 10px 0 20px 0;
+    color: $light-blue;
+    font-size: 14px;
+    div{
+        display: inline-block;
+        margin-left: 30px;
+    }
+}
+.clipboard-link{
+    font-weight: bold;
+    font-size: 14px;
+    a{
+        color: $medium-blue;
+        // border-bottom: 1px dashed $medium-blue;
+    }
+}
+
+.clipboard-content{
+    height: 500px;
+    overflow-y: scroll;
+    // @include scrollbars(.5em, slategray);
+    margin-bottom: 15px;
+    padding: 0 0 15px 15px;
+}
+.clipboard-item{
+    background: #F5F5F5;
+    border-right: 2px solid $blue;
+    padding: 15px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    font-size: 14px;
+    @include box-shadow(0px, 1px, 2px, rgba(0, 0, 0, 0.15));
+
+    img{
+        display: block;
+        max-width: 100%;
+    }
+
+    &:hover{
+        .delete{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+.clipboard-input{
+    // padding: 0 15px;
+    position: relative;
+    margin-left: 30px;
+    textarea{
+        display: block;
+        width: 100%;
+        height: 100px;
+        border: 2px solid #EEEEEE;
+        padding: 15px 15px 15px 60px;
+        resize: none;
+        border-radius: $radius;
+    }
+    input[type="submit"]{
+        font-family: fontAwesome;
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 0;
+        background: #34314c;
+        color: $white;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        border: 2px solid transparent;
+        transition: ease-in-out .25s;
+        &:hover{
+            border: 2px solid $dark-blue;
+            background: $white;
+            color: $dark-blue;
+        }
+
+    }
+}
+.delete{
+    float: left;
+    margin-top: 15px;
+    display: inline-block;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 13px;
+    transition: ease-in-out .1s;
+    font-size: 16px;
+    a{
+        color: $red;
+    }
+}
+
+.clipboard-list{
+    list-style: none;
+
+}
+.list-item{
+    @extend .clipboard-item;
+    // border-color: $dark-blue;
+    border: 0;
+    overflow: visible;
+    position: relative;
+    background-color: #e7e7e7;
+    box-shadow: none;
+    border-radius: $radius;
+    padding: 15px 10;
+    &:hover{
+    }
+    .edit{
+        margin-right: 15px;
+        a{
+            background-color: $blue;
+            padding: 0 5px;
+            color: $white;
+            border-radius: $radius;
+            font-size: 13px;
+            display: inline-block;
+        }
+    }
+    .clipboard-info{
+        margin: 0;
+        margin-top: 34px;
+        div{
+            float: left;
+            margin-left: 0;
+            margin-right: 25px;
+        }
+    }
+    b{
+        font-size: 18px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+    .clipboard-info{
+        float: left;
+    }
+}
+
+.email-form{
+    input[type="email"], input[type="password"]{
+        border: 2px solid $blue;
+        border-radius: $radius;
+        padding: 10px;
+        width: 100%;
+        direction: ltr;
+        text-align: right;
+    }
+    input[type="submit"]{
+        position: absolute;
+        left: 0;
+        background: $blue;
+        border: 2px solid transparent;
+        padding: 10px 30px;
+        border-radius: $radius;
+        color: $white;
+
+    }
+}
+
+.private-form{
+    input[type="password"]{
+        border-color: $green;
+    }
+    input[type="submit"]{
+        background-color: $green;
+    }
+    @extend .email-form;
+    
+}
+.page.extra{
+    p{
+        margin-bottom: 30px;
+    }
+}
